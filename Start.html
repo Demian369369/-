@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página oficial de Ragknos Demian, ingeniero y artista multidisciplinario mexicano especializado en música y pintura psicodélica.">
+    <meta name="keywords" content="Ragknos Demian, arte psicodélico, música, pintura, SoundCloud, YouTube">
+    <meta name="author" content="Ragknos Demian">
+    <title>Ragknos Demian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --psychedelic-purple: #6a0dad;
+            --neon-green: #39ff14;
+            --neon-pink: #ff1493;
+            --deep-black: #0a0a0a;
+            --mystical-blue: #4b0082;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Orbitron', Arial, sans-serif;
+            background-color: var(--deep-black);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(106, 13, 173, 0.3), transparent 40%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 20, 147, 0.2), transparent 50%);
+            animation: gradient-shift 15s ease infinite;
+            z-index: -2;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(106, 13, 173, 0.5);
+            margin: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--neon-green);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            color: var(--neon-pink);
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .nav-item:hover {
+            background: var(--neon-pink);
+            color: black;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            color: var(--neon-pink);
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: var(--neon-green);
+            transform: scale(1.2);
+        }
+
+        .content-section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(106, 13, 173, 0.3);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--neon-green);
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .audio-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <section id="music" class="content-section">
+        <div class="social-links">
+            <a href="https://www.instagram.com/demianr_369/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@DemianRagknos" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://soundcloud.com/ragknos" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="audio-gallery">
+            <audio controls>
+                <source src="Bside_1.mp3" type="audio/mpeg">
+                Tu navegador no soporta este formato de audio.
+            </audio>
+            <audio controls>
+                <source src="Bside_2.mp3" type="audio/mpeg">
+                Tu navegador no soporta este formato de audio.
+            </audio>
+            <audio controls>
+                <source src="Bside_3.mp3" type="audio/mpeg">
+                Tu navegador no soporta este formato de audio.
+            </audio>
+        </div>
+    </section>
+
+    <section id="gallery" class="content-section">
+        <div class="gallery" id="artGallery"></div>
+    </section>
+
+    <div class="modal" id="artModal">
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Arte">
+        </div>
+    </div>
+
+    <script>
+        const artworks = [
+            'Album_idea1.jpg', 
+            'Album_idea2.jpg', 
+            'Album_idea3.jpg',
+            'Album_idea4.jpg',
+            'Album_idea5.jpg',
+            'Album_idea6.jpg',
+            'Album_idea7.jpg',
+            'Album_idea8.jpg',
+            'Album_idea9.jpg',
+            'Album_idea10.jpg',
+            'Album_idea11.jpg',
+            'Album_idea12.jpg',
+            'Album_idea13.jpg',
+            'Album_idea14.jpg',
+            'Album_idea15.jpg',
+        ];
+
+        function initGallery() {
+            const gallery = document.getElementById('artGallery');
+            const modal = document.getElementById('artModal');
+            const modalImage = document.getElementById('modalImage');
+
+            artworks.forEach(artwork => {
+                const img = document.createElement('img');
+                img.src = artwork;
+                img.onclick = () => {
+                    modal.style.display = 'flex';
+                    modalImage.src = artwork;
+                };
+                gallery.appendChild(img);
+            });
+
+            modal.onclick = () => modal.style.display = 'none';
+        }
+
+        initGallery();
+    </script>
+</body>
+</html>

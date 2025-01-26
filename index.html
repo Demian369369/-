@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mariesynth</title>
+    <title>Ragknos Demian</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         body {
@@ -97,16 +97,13 @@
 </head>
 <body class="bg-gray-900 text-gray-100">
     <audio id="background-audio" loop>
-        <source src="audios/Marie.mp3" type="audio/mp3">
+        <source src="Bside_1.mp3" type="audio/mp3">
     </audio>
-    <div class="bubble" onclick="window.location.href='https://soundcloud.com/ferku';"></div>
     <div id="container">
-        <img id="eye-button" src="eye_image.png" alt="Ojo que todo lo ve" onclick="hideEyeButton()">
+        <img id="eye-button" src="Album_idea3.jpg" alt="Ojo que todo lo ve" onclick="hideEyeButton()">
     </div>
     <div id="mandala-background"></div>
-    <video id="video-background" autoplay loop muted>
-        <source src="AAA.mp4" type="video/mp4">
-    </video>
+  
     <canvas id="mandalaCanvas"></canvas>
     <script>
         function createMandala() {
@@ -149,14 +146,14 @@
         let eyeRotation = 0;
         function drawConcentricCircles(radius, layers) {
             const coldColors = [
-                "#4B0082", // Índigo
-                "#6A5ACD", // Púrpura medio
-                "#00CED1", // Turquesa oscuro
-                "#7FFFD4", // Aquamarine
-                "#8A2BE2", // Azul violeta
-                "#00BFFF", // Azul profundo
-                "#ADFF2F", // Verde amarillento brillante
-                "#9ACD32"  // Verde oliva amarillo
+                "#4B0082",
+                "#6A5ACD", 
+                "#00CED1", 
+                "#7FFFD4", 
+                "#8A2BE2", 
+                "#00BFFF", 
+                "#ADFF2F", 
+                "#9ACD32"  
             ];
             for (let i = 0; i < layers; i++) {
                 ctx.beginPath();

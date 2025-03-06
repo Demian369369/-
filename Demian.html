@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragknos Demian</title>
+    <link rel="stylesheet" href="Dem.css">
+    <script>
+        function cambiarIdioma(idioma) {
+            const textos = {
+                "es": {
+                    "inicio": "Inicio",
+                    "sobre_mi": "Sobre Mí",
+                    "sobre_mi_texto_completo": "Mi enfoque artístico combina técnicas tradicionales con innovaciones tecnológicas, creando un puente entre el pasado y el futuro de la música. Cada proyecto es una oportunidad para redefinir los límites de mi expresión creativa con el objetivo de experimentar.",
+                    "musica": "Música",
+                    "contacto": "Contacto",
+                    "titulo": "Ragknos Demian",
+                    "subtitulo": "Amante de la música y sobre todo los sintetizadores.",
+                    "ver_musica": "Ver Música",
+                    "sobre_mi_titulo": "Sobre Mí",
+                    "sobre_mi_texto": "Soy un artista musical dedicado a la exploración de nuevos territorios sonoros, fusionando géneros y experimentando.",
+                    "mi_musica": "Mi Música",
+                    "reproducir": "Reproducir",
+                    "proximamente": "Próximamente",
+                    "galeria": "Galería",
+                    "contactame": "Contáctame",
+                    "instagram": "Instagram",
+                    "email": "Email"
+                },
+                "en": {
+                    "inicio": "Home",
+                    "sobre_mi": "About Me",
+                    "sobre_mi_texto_completo": "My artistic approach combines traditional techniques with technological innovations, creating a bridge between the past and the future of music. Each project is an opportunity to redefine the limits of my creative expression with the goal of experimenting.",
+                    "musica": "Music",
+                    "contacto": "Contact",
+                    "titulo": "Ragknos Demian",
+                    "subtitulo": "Music lover and especially synthesizers.",
+                    "ver_musica": "See Music",
+                    "sobre_mi_titulo": "About Me",
+                    "sobre_mi_texto": "I am a musical artist dedicated to exploring new sound territories, merging genres, and experimenting.",
+                    "mi_musica": "My Music",
+                    "reproducir": "Play",
+                    "proximamente": "Coming Soon",
+                    "galeria": "Gallery",
+                    "contactame": "Contact Me",
+                    "instagram": "Instagram",
+                    "email": "Email"
+                }
+            };
+            
+            document.querySelectorAll("[data-translate]").forEach(elemento => {
+                const clave = elemento.getAttribute("data-translate");
+                elemento.innerText = textos[idioma][clave];
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="background-animation"></div>
+        <nav>
+        <div class="logo">Ragknos Demian</div>
+        <div class="nav-links">
+            <a href="#home" data-translate="inicio">Inicio</a>
+            <a href="#about" data-translate="sobre_mi">Sobre Mí</a>
+            <a href="#music" data-translate="musica">Música</a>
+            <a href="#gallery" data-translate="galeria">Galeria</a>
+            <a href="#contact" data-translate="contacto">Contacto</a>
+        </div>
+        <div class="flags">
+            <span onclick="cambiarIdioma('es')" style="cursor: pointer;">🇲🇽</span>
+            <span onclick="cambiarIdioma('en')" style="cursor: pointer;">🇺🇸</span>
+        </div>
+        <div class="hamburger">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </nav>
+    
+    <section class="hero" id="home">
+        <div class="psychedelic-shape shape-1"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Ragknos Demian</h1>
+            <p class="hero-subtitle" data-translate="subtitulo">Amante de la música y sobre todo los sintetizadores.</p>
+            <a href="#music" class="cta-button" data-translate="ver_musica">Ver Música</a>
+            
+            <div class="album-art">
+                <img src="Album_idea11.jpg" alt="Último EP">
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="psychedelic-shape shape-2"></div>
+        <h2 class="section-title" data-translate="sobre_mi_titulo">Sobre Mí</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Album_idea3.jpg" alt="">
+            </div>
+            <div class="about-text">
+                <p data-translate="sobre_mi_texto">Soy un artista musical dedicado a la exploración de nuevos territorios sonoros, fusionando géneros y experimentando.</p>
+                <p data-translate="sobre_mi_texto_completo">Mi enfoque artístico combina técnicas tradicionales con innovaciones tecnológicas, creando un puente entre el pasado y el futuro de la música. Cada proyecto es una oportunidad para redefinir los límites de mi expresión creativa con el objetivo de experimentar.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="music" id="music">
+        <h2 class="section-title" data-translate="mi_musica">Mi Música</h2>
+        <div class="music-grid">
+            <div class="music-card">
+                <div class="music-cover">
+                    <img src="Album_idea11.jpg" alt="EP 1">
+                </div>
+                <div class="music-info">
+                    <h3 class="music-title">Dreams</h3>
+                    <p class="music-year">2025 · EP</p>
+                    <button class="play-button"data-translate="reproducir" onclick="window.location.href='https://open.spotify.com/album/6ePy3hJ2E1UpDYQfx2kyzO?si=tT14reA6SCyQd8tGiFSlrg'">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3L19 12L5 21V3Z" fill="currentColor"/>
+                        </svg>
+                        Reproducir
+                    </button>
+                </div>
+            </div>
+            
+            <div class="music-card">
+                <div class="music-cover">
+                    <img src="Album_idea4.jpg" alt="EP 2">
+                </div>
+                <div class="music-info">
+                    <h3 class="music-title" data-translate="proximamente">Proximamente</h3>
+                    <p class="music-year">2025 · EP</p>
+                    <button data-translate="reproducir" class="play-button">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3L19 12L5 21V3Z" fill="currentColor"/>
+                        </svg>
+                        
+                    </button>
+                </div>
+            </div>
+            
+            <div class="music-card">
+                <div class="music-cover">
+                    <img src="Album_idea8.jpg" alt="Álbum 3">
+                </div>
+                <div class="music-info">
+                    <h3 class="music-title" data-translate="proximamente">Proximamente</h3>
+                    <p class="music-year">2025 · EP</p>
+                    <button data-translate="reproducir" class="play-button">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3L19 12L5 21V3Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</head>
+<body>
+    <section class="gallery section" id="gallery">
+        <h2 class="section-title" data-translate="galeria">Galeria</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Album_idea10.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="Album_idea54.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="Album_idea74.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="Album_idea31.jpg" alt="Gallery Image 4">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section " id="contact">
+        <h2 class="section-title" data-translate="contactame">Contactame</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📷</div>
+                    <div class="contact-details">
+                        <p class="contact-label" data-translate="instagram">Instagram</p>
+                        <p class="contact-value">demianr_369</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <p class="contact-label" data-translate="email">Email</p>
+                        <p class="contact-value">demianrgz23@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+    </section>
+</body>
+</html>
